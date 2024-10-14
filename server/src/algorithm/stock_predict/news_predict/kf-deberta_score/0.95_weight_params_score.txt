@@ -1,0 +1,25 @@
+# 클래스 가중치 계산
+total_samples = 3822 + 5334
+negative_weight = total_samples / 3822  # 부정 클래스 가중치
+positive_weight = total_samples / 5334  # 긍정 클래스 가중치
+negative_weight *= 0.95  # 부정 클래스 가중치 증가
+
+# TrainingArguments 설정
+training_args = TrainingArguments(
+    output_dir = './results',  # 학습된 모델과 결과를 저장할 경로 설정
+    learning_rate=3e-5,  # 학습률 설정
+    per_device_train_batch_size = 8,  # 학습 배치 크기 설정
+    per_device_eval_batch_size = 8,  # 평가 배치 크기 설정
+    num_train_epochs = 1,  # 현재 학습 에포크 수 설정
+    weight_decay=0.01,  # 가중치 감쇠 설정
+    logging_dir='./logs',  # 로그 저장 경로 설정
+    logging_steps=10,  # 로그를 기록할 단계 수 설정
+
+Accuracy: 0.47270742358078605
+Precision: 0.5780542986425339
+Recall: 0.4628623188405797
+F1 Score: 0.5140845070422535
+Specificity: 0.4876373626373626
+Confusion Matrix:
+[[355 373]
+ [593 511]]
