@@ -50,31 +50,12 @@ function MyPage() {
   const [isSecessionModalOpen, setIsSecessionModalOpen] = useState(false);
 
   useEffect(() => {
-    const fetchUserProfile = async () => {
-      try {
-        const request = await fetch(`${process.env.REACT_APP_API_URL}/api/auth/profile`, {  // /profile 엔드포인트로 GET 요청
-          method: 'GET',
-          credentials: 'include',  // 세션 쿠키 포함
-        });
-
-        if (!request.ok) {
-          throw new Error('프로필 정보를 가져오는 중 오류가 발생했습니다.');
-        }
-        const resData = await request.json();
-
-        // 가져온 데이터로 사용자 이메일을 사용하여 추가 정보 요청
-        getUserData(resData.email);
-      } catch (error) {
-        console.error('프로필 정보를 가져오는 중 오류가 발생했습니다:', error);
-      }
-    };
 
     const getUserData = async (email) => {
       try {
         const request = await fetch(`${process.env.REACT_APP_API_URL}/api/mypage/defaultdata`, {
-          method: 'POST',
+          method: 'GET',
           headers: { 'content-type': 'application/json; charset=UTF-8' },
-          body: JSON.stringify({ user_email: email }),  // 세션에서 가져온 이메일 사용
           credentials: 'include',
         });
 
@@ -96,8 +77,8 @@ function MyPage() {
         console.error('유저정보가져오기 비동기통신에러:', error);
       }
     };
-
-    fetchUserProfile(); // 세션 정보를 가져와 사용자 프로필을 요청
+    getUserData();
+    // fetchUserProfile(); // 세션 정보를 가져와 사용자 프로필을 요청
   }, []);
 
   const handleChange = (e) => {

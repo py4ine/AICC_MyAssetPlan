@@ -2,14 +2,15 @@ const pool = require('../config/database');
 const bcrypt = require('bcryptjs');
 
 // 유저 데이터 조회 함수
-const postUserData = async (req, res) => {
-  const receiveEmail = req.body.user_email;
+const getUserData = async (req, res) => {
+  const userId = req.session.userId;  // 세션에 저장된 userId 사용
+  console.log(userId);
     
   let connection;
   try {
     connection = await pool.getConnection();
-    const query = "SELECT * FROM tb_user_key WHERE uk_email = ?";
-    const [result] = await connection.execute(query, [receiveEmail]);
+    const query = "SELECT * FROM tb_user_key WHERE user_id = ?";
+    const [result] = await connection.execute(query, [userId]);
 
     // result가 배열이 아니라 객체일 경우 바로 사용
     const userData = Array.isArray(result) ? result[0] : result;
@@ -139,7 +140,7 @@ const deleteId = async (req, res) => {
 
 
 module.exports = {
-  postUserData,
+  getUserData,
   putUserChangeData,
   deleteId
 };
