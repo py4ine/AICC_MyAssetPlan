@@ -47,7 +47,7 @@ readme_image 파일에 사진저장한거 불러와서 소개합니다.
 # 8. 총 평 
 ## 팀 회고
 ### 배포 
-- AI 모델이 없는 WEB SERVICE만 있을때는 한 인스턴스에 배포가 되었었습니다. 
+- WEB Service만 배포할 때는 한 인스턴스에 모두 배포할 수 있었습니다.
 - AI 모델을 모두 합치자 한 곳에만 배포가 어려웠고 각 Client, Server, Database 세가지로 나누게 되었습니다.
 - 이에 따라 AWS VPC를 구성하여 배포를 시도했습니다. 
 - 그러나 Server 인스턴스의 메모리와 용량 부족으로 배포가 중단되었습니다.
@@ -66,6 +66,4 @@ readme_image 파일에 사진저장한거 불러와서 소개합니다.
 
 📤 [***AWS VPC 데이터베이스***](https://github.com/sebin0918/aiccmap_database)
 
-
-
-### 배포 
+## 개인 회고
