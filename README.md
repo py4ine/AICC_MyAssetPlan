@@ -7,7 +7,7 @@ readme_image 파일에 사진저장한거 불러와서 소개합니다.
 # 5. 화면
 
 | **메인화면**  | **회원가입** |
-|------------|------------|
+|:------------:|:------------:|
 | ![Main Page](./readme_image/main.png) | ![Sign Up](./readme_image/signUp.png) |
 | **로그인**    | **마이페이지** |
 | ![Login Page](./readme_image/login.png) | ![MyPage](./readme_image/mypage.png) |
