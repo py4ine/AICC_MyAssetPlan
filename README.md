@@ -10,6 +10,7 @@ readme_image 파일에 사진저장한거 불러와서 소개합니다.
 My Asset Plan (MAP) 통합 자산 관리 플랫폼
 
 ## (2) 프로젝트 로고
+![Logo](/readme_image/Logo.png)
 
 
 ## (3) 프로젝트 정보
@@ -68,13 +69,17 @@ My Asset Plan (MAP) 통합 자산 관리 플랫폼
 
 # 2. 프로젝트 아키텍처
 ## (1) 시스템 구성도
-
+![System Architecture](/readme_image/SystemArchitecture.png)
 
 ## (2) 유스케이스 다이어그램
-
+| **메인페이지**  | **MAP페이지** |
+|:------------:|:------------:|
+| ![Main Page](./readme_image/UD_Main.png) | ![MAP](./readme_image/UD_MAP.png) |
+| **주식페이지**    | **뉴스페이지** |
+| ![Stock](./readme_image/UD_Stock.png) | ![News](./readme_image/UD_News.png) |
 
 ## (3) ERD (Entity Relationship Diagram)
-
+![ERD](/readme_image/ERD.png)
 
 
 # 3. 프로젝트 시작 가이드
