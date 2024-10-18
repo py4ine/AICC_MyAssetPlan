@@ -28,7 +28,7 @@ readme_image 파일에 사진저장한거 불러와서 소개합니다.
 ## 7.1 로그인
 - 회원가입 시, 가입한 이메일과 비밀번호로 로그인이 가능합니다. 
 - 로그인하면 사용자의 세션이 생성됩니다. 
-📌 [상세 설명](https://github.com/LittlePrince327/AICC_MyAssetPlan/wiki/Login)
+\n 📌 [상세 설명](https://github.com/LittlePrince327/AICC_MyAssetPlan/wiki/Login)
 
 ## 7.4 관리자 화면
 - 관리자 권한을 가지고있는 사용자만 접근 가능합니다. 
