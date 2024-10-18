@@ -47,3 +47,18 @@ readme_image 파일에 사진저장한거 불러와서 소개합니다.
 # 8. 총 평 
 ## 팀 회고
 ### 배포 
+- AI 모델이 없는 WEB SERVICE만 있을때는 한 인스턴스에 배포가 되었었습니다. 
+- AI 모델을 모두 합치자 한 곳에만 배포가 어려웠고 각 Client, Server, Database 세가지로 나누게 되었습니다.
+- 이에 따라 AWS VPC를 구성하여 배포를 시도했습니다. 
+
+### AWS VPC 구조도
+![AWS VPC](./readme_image/AWS_VPC_배포구조도.png)
+
+### 시도했던 GitHub Link
+📤 [클라이언트](https://github.com/sebin0918/aiccmap_client)
+📤 [서버](https://github.com/sebin0918/aiccmap_server)
+📤 [데이터베이스](https://github.com/sebin0918/aiccmap_database)
+
+
+
+### 배포 
