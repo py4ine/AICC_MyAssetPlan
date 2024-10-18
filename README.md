@@ -110,6 +110,8 @@
 
 # 6. 데이터
 ## 6.1 데이터 수집
+- 데이터는 Python Library 및 Open API를 통해 진행하였습니다.
+
 ![image](https://github.com/user-attachments/assets/73feeb55-81fc-4220-a522-4bb65c219c6c)
 + 한국은행 API 추가
 
@@ -161,7 +163,7 @@
 - 가계부 페이지는 사용자 편의성을 고려한 월별 입출금 금액을 일일자로 확인 가능합니다.
 - 또한, 일자별 입출금 내역 및 메모 편집 기능과 키워드별 입출금 내역 확인 기능이 있습니다.
 
-📌 [상세 설명]
+📌 [상세 설명](https://github.com/LittlePrince327/AICC_MyAssetPlan/wiki/Household)
 
 
 ## 7.7 주가 비교
