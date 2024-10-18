@@ -72,10 +72,10 @@ My Asset Plan (MAP) 통합 자산 관리 플랫폼
 ![System Architecture](/readme_image/SystemArchitecture.png)
 
 ## (2) 유스케이스 다이어그램
-| **메인페이지**  | **MAP페이지** |
+| **메인 페이지**  | **MAP 페이지** |
 |:------------:|:------------:|
 | ![Main Page](./readme_image/UD_Main.png) | ![MAP](./readme_image/UD_MAP.png) |
-| **주식페이지**    | **뉴스페이지** |
+| **주식 페이지**    | **뉴스 페이지** |
 | ![Stock](./readme_image/UD_Stock.png) | ![News](./readme_image/UD_News.png) |
 
 ## (3) ERD (Entity Relationship Diagram)
@@ -91,6 +91,7 @@ My Asset Plan (MAP) 통합 자산 관리 플랫폼
 
 
 # 4. 기술 스택
+![image](https://github.com/user-attachments/assets/c48d5793-5eeb-45d2-8c7f-64c0ee97c2fc)
 
 
 
@@ -100,7 +101,8 @@ My Asset Plan (MAP) 통합 자산 관리 플랫폼
 
 # 6. 데이터
 ## (1) 데이터 수집
-
+![image](https://github.com/user-attachments/assets/73feeb55-81fc-4220-a522-4bb65c219c6c)
++ 한국은행 API 추가
 
 ## (2) 데이터베이스
 
@@ -166,23 +168,5 @@ My Asset Plan (MAP) 통합 자산 관리 플랫폼
 👩‍💻 인진석
 
 👩‍💻 임세빈
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
