@@ -58,11 +58,13 @@ readme_image 파일에 사진저장한거 불러와서 소개합니다.
 ### 시도했던 GitHub Link
 - 상세 배포 설명은 아래 링크에서 확인해주세요.
 
-📤 [클라이언트](https://github.com/sebin0918/aiccmap_client)
+📋 [Notion Arrangement](https://creative-fox-a1a.notion.site/AWS-VPC-11328e6ef1ff802685b2f72017fbdffe?pvs=4)
 
-📤 [서버](https://github.com/sebin0918/aiccmap_server)
+📤 [AWS VPC 클라이언트](https://github.com/sebin0918/aiccmap_client)
 
-📤 [데이터베이스](https://github.com/sebin0918/aiccmap_database)
+📤 [AWS VPC 서버](https://github.com/sebin0918/aiccmap_server)
+
+📤 [AWS VPC 데이터베이스](https://github.com/sebin0918/aiccmap_database)
 
 
 
