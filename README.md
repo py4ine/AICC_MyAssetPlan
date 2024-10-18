@@ -21,3 +21,9 @@ readme_image 파일에 사진저장한거 불러와서 소개합니다.
 | ![FAQ](./readme_image/FAQ.png) | ![Adim](./readme_image/admin.png) |
 | **챗봇**    | - |
 | ![Chatbot](./readme_image/chatbot.png) | -|
+
+
+# 7. 기능 설명
+
+## 7.1 로그인
+- 설명 테스트
