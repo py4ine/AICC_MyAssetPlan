@@ -78,14 +78,54 @@
 
 # 3. 프로젝트 시작 가이드
 ## 3.1 요구사항
-### 3.1.1 requirements (Link)[].
+### 3.1.1 실행환경 [Link]()
+### 3.1.2 학습환경 [Link]()
 
 ## 3.2 설치 및 실행
+### 3.2.1 client 관련 설치
+```
+npm install
+npm install fullcalendar 
+npm install @fullcalendar/react
+npm install framer-motion
+npm install react-paginate
+```
 
+### 3.2.2 server 관련 설치
+```
+npm install
+npm install express-rate-limit // api 호출 제한을 위해 설치
+npm install nodemailer
+python -m spacy download ko_core_news_sm //chatbot 이용을 위한 한국어 모델 설치
+npm install ioredis
+npm install socket.io
+npm install express-socket.io-session
+npm install bcryptjs
+```
+
+#### 3.2.2.1 redis 관련 설치
+```
+wsl --install 
+sudo apt install redis-server
+sudo service redis-server start
+```
+
+#### 3.2.2.2 redis session check
+```
+open wsl terminal
+redis-cli
+KEYS sess:* // 전체 세션 확인
+FLUSHALL // 활성 세션 전체 강제 삭제
+```
+
+`node join_security/hashExistingPasswords.js` // 해싱이 안 되어있는 사용자 비밀번호 전체 해싱
 
 
 # 4. 기술 스택
-![image](https://github.com/user-attachments/assets/c48d5793-5eeb-45d2-8c7f-64c0ee97c2fc)
+![image](https://github.com/user-attachments/assets/73feeb55-81fc-4220-a522-4bb65c219c6c)
+
+
+
 <div style="display:flex; flex-direction:column; align-items:flex-start;">
     <img src="https://img.shields.io/badge/Java-007396?style=flat-square&logo=Java&logoColor=white"> 
     <img src="https://img.shields.io/badge/Spring Boot-6DB33F?style=flat-square&logo=spring boot&logoColor=white"> 
