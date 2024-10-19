@@ -46,13 +46,13 @@
 
 ## 1.4 팀 소개
 ### AICC 인공지능 컨택센터 웹 서비스 개발 (코드랩 아카데미) 2기 1팀 MAP (My Asset Plan)
-#### 👩‍💻 송민영 (팀장)
-#### 👩‍💻 박상희 (AI 파트장)
-#### 👩‍💻 인진석 (DB 파트장)
-#### 👩‍💻 임세빈 (Web 파트장)
-#### 👩‍💻 김준우
-#### 👩‍💻 신재준
-#### 👩‍💻 심유경
+#### 👩‍💻 [송민영](https://github.com/mys1110) (팀장)
+#### 👩‍💻 [박상희](https://github.com/LittlePrince327) (AI 파트장)
+#### 👩‍💻 [인진석](https://github.com/jinseok-in) (DB 파트장)
+#### 👩‍💻 [임세빈](https://github.com/sebin0918) (Web 파트장)
+#### 👩‍💻 [김준우](https://github.com/py4ine)
+#### 👩‍💻 [신재준](https://github.com/kimsamak)
+#### 👩‍💻 [심유경](https://github.com/YukyungShim)
 
 
 ## 1.5 시연 영상 링크
@@ -86,7 +86,23 @@
 
 # 4. 기술 스택
 ![image](https://github.com/user-attachments/assets/c48d5793-5eeb-45d2-8c7f-64c0ee97c2fc)
+<div style="display:flex; flex-direction:column; align-items:flex-start;">
+    <img src="https://img.shields.io/badge/Java-007396?style=flat-square&logo=Java&logoColor=white"> 
+    <img src="https://img.shields.io/badge/Spring Boot-6DB33F?style=flat-square&logo=spring boot&logoColor=white"> 
+    <img src="https://img.shields.io/badge/python-3776AB?style=flat-square&logo=python&logoColor=white"> 
+    <img src="https://img.shields.io/badge/mariadb-F80000?style=flat-square&logo=mariadb&logoColor=white"> 
+    <img src="https://img.shields.io/badge/mysql-4479A1?style=flat-square&logo=mysql&logoColor=white"> 
+    <img src="https://img.shields.io/badge/apache tomcat-F8DC75?style=flat-square&logo=apachetomcat&logoColor=black">
+    <img src="https://img.shields.io/badge/html5-E34F26?style=flat-square&logo=html5&logoColor=white"> 
+    <img src="https://img.shields.io/badge/react-61DAFB?style=flat-square&logo=react&logoColor=black">
+    <img src="https://img.shields.io/badge/javascript-F7DF1E?style=flat-square&logo=javascript&logoColor=black">
+    <img src="https://img.shields.io/badge/eclipse ide-2C2255?style=flat-square&logo=eclipse ide&logoColor=white">
+    <img src="https://img.shields.io/badge/Andoid Studio-3DDC84?style=flat-square&logo=android studio&logoColor=white">
+    <img src="https://img.shields.io/badge/intellij idea-000000?style=flat-square&logo=intellij idea&logoColor=white">
+    <img src="https://img.shields.io/badge/visual studio code-007ACC?style=flat-square&logo=visual studio code&logoColor=white">
+    <img src="https://img.shields.io/badge/notion-000000?style=flat-square&logo=notion&logoColor=white">
 
+</div>
 
 
 # 5. 화면
@@ -187,6 +203,7 @@
 - 오늘의 뉴스를 확인할 수 있는 페이지로 뉴스의 제목, 본문 요약, 원문 링크를 확인할 수 있습니다.
 - KcBERT, KF-DeBERTa 모델과 키워드를 통한 분류를 통해 호재와 악재를 분류하여 화면에서 확인할 수 있습니다.
 - 알고리즘 순서도
+  
 ![Algorithm Chatbot](/readme_image/AlgorithmNews.png)
 
 
@@ -231,13 +248,16 @@
 # 8. 총평
 ## 8.1 팀 회고
 ### 8.1.1 MyData
-- 
+- MyData와의 API 연동으로 실제 사용자의 데이터를 가져와 화면에 표시하는 것으로 계획을 하였습니다.
+- MyData API를 발급 시 필요한 조건이 부합하지 않아 발급이 이루어지지 않았습니다.
 
 ### 8.1.2 학습 데이터 수집
 - 
 
 ### 8.1.3 시간 및 자원 부족
-- 
+- AI 학습과 배포 등 다양한 부분에서 시간과 자원이 부족하였습니다.
+- 이에 학원에서 코랩 컴퓨팅 단위를 지원해주었으나, 추가적으로 필요한 부분은 팀 내 자체적으로 추가 결제했습니다.
+- 이 밖에도 AWS 배포 시도 시 비용과 LLM 모델 학습을 위해 구글 Drive 스토리지 등을 추가 결제할 수 밖에 없어 프로젝트를 원활하게 진행하기 어려웠습니다.
 
 ### 8.1.4 배포
 - WEB Service만 배포할 때는 한 인스턴스에 모두 배포할 수 있었습니다.
