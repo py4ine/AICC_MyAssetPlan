@@ -4,7 +4,6 @@
 ### My Asset Plan (MAP) 통합 자산 관리 플랫폼
 
 ## 1.2 프로젝트 로고
-<div align="center">![Logo](/readme_image/Logo.png)</div>
 <div align="center">
     <img src="/readme_image/Logo.png" alt="Logo">
 </div>
