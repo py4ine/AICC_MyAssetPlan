@@ -191,7 +191,7 @@ FLUSHALL // 활성 세션 전체 강제 삭제
 - 인증코드를 활용한 실사용 이메일을 확인합니다.
 - 회원정보를 DB에 저장합니다.
 
-📌 [상세 설명](https://github.com/LittlePrince327/AICC_MyAssetPlan/wiki/Register)
+📌 [상세 설명](https://github.com/LittlePrince327/AICC_MyAssetPlan/wiki/Register_%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85)
 
 
 ## 7.3 마이페이지
@@ -229,7 +229,7 @@ FLUSHALL // 활성 세션 전체 강제 삭제
 - 주가 비교 페이지는 2014년 9월 17일부터 현재까지의 삼성전자와 애플의 주가, 비트코인의 가격을 비교합니다.
 - 또한, 한국과 미국의 경제지표, 금, 유가, 환율 등의 정보를 가져와 비교할 수 있습니다.
 
-📌 [상세 설명]()
+📌 [상세 설명](https://github.com/LittlePrince327/AICC_MyAssetPlan/wiki/Stock-price-Comparison)
 
 
 ## 7.8 주가 예측
@@ -239,7 +239,7 @@ FLUSHALL // 활성 세션 전체 강제 삭제
 ![Algorithm Stock](/readme_image/AlgorithmStock.png)
 
 
-📌 [상세 설명]()
+📌 [상세 설명](https://github.com/LittlePrince327/AICC_MyAssetPlan/wiki/Stock-Predict)
 
 
 ## 7.9 뉴스
@@ -250,14 +250,14 @@ FLUSHALL // 활성 세션 전체 강제 삭제
 ![Algorithm Chatbot](/readme_image/AlgorithmNews.png)
 
 
-📌 [상세 설명]()
+📌 [상세 설명](https://github.com/LittlePrince327/AICC_MyAssetPlan/wiki/News-page)
 
 
 ## 7.10 통합 채팅방
 - 사용자 간 익명으로 소통할 수 있는 커뮤니티 기능을 제공합니다. 
 - 대화 내용은 24시간 뒤 초기화 됩니다.
 
-📌 [상세 설명]()
+📌 [상세 설명](https://github.com/LittlePrince327/AICC_MyAssetPlan/wiki/NewsTalk)
 
 
 ## 7.11 FAQ
