@@ -54,9 +54,6 @@ import torch.nn as nn
 # 안전한 텐서 사용
 from safetensors.torch import safe_open
 
-# Faker 라이브러리
-import faker
-
 # 로깅 및 경고
 import pytz
 
@@ -86,157 +83,6 @@ client_id = API_key[2].replace('\n', '')
 client_secret = API_key[3].replace('\n', '')
 
 # ================================================================== Function ==================================================================
-
-# 난수 생성 함수
-def generate_random_password(length=12):
-    characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()"
-    return ''.join(random.choice(characters) for _ in range(length))
-
-def generate_random_bank_number(length=12):
-    return ''.join(random.choices(string.digits, k=length))
-
-def generate_phone_number():
-    return '010' + ''.join(random.choices(string.digits, k=6))
-
-# 금액을 00 단위로 맞추는 함수
-def round_to_hundred(amount):
-    return (amount // 100) * 100
-
-# 데이터 생성 함수
-def create_user_data(num_users=10, income_range=(2000, 5000), fixed_income_range=(2500000, 4500000),
-                    expense_range=(5000, 20000), fixed_expense_range=(100000, 400000)):
-    # tb_user_key (사용자 정보)
-    user_ids = list(range(1, num_users + 1))  # user_id를 숫자 형태로 생성
-    emails = [fake.email() for _ in range(num_users)]
-    passwords = [generate_random_password() for _ in range(num_users)]
-    permissions = [1] * (num_users)
-
-    user_ids[0], emails[0], passwords[0], permissions[0] = 1, 'root@root.com', '1', 0 # 관리자 계정
-    user_ids[1], emails[1], passwords[1], permissions[1] = 2, 'user@user.com', '1', 0
-    user_ids[2], emails[2], passwords[2], permissions[2] = 3, 'test@test.com', '1', 1
-
-    df_user_key = pd.DataFrame({
-        'user_id': user_ids,
-        'uk_email': emails,
-        'uk_password': passwords,
-        'uk_permission': permissions
-    })
-
-    # tb_user_information (사용자 상세 정보)
-    names = [fake.name() for _ in range(num_users)]
-    birth_dates = [fake.date_of_birth(minimum_age=18, maximum_age=80) for _ in range(num_users)]
-    sexes = [random.choice([0, 1]) for _ in range(num_users)]  # 성별을 랜덤으로 선택
-    bank_nums = [generate_random_bank_number() for _ in range(num_users)]
-    phone_numbers = [generate_phone_number() for _ in range(num_users)]
-
-    df_user_information = pd.DataFrame({
-        'user_id': user_ids,
-        'ui_name': names,
-        'ui_birth_date': birth_dates,
-        'ui_sex': sexes,
-        'ui_bank_num': bank_nums,
-        'ui_caution': [0] * num_users,
-        'ui_phone_number': phone_numbers
-    })
-
-    # tb_user_finance (사용자 재무 정보)
-    capitals = np.random.randint(5000000, 50000000, size=num_users)  # 자본금
-    loans = np.random.randint(0, 30000000, size=num_users)  # 대출
-    installment_savings = np.random.randint(0, 20000000, size=num_users)  # 적금
-    deposits = np.random.randint(0, 40000000, size=num_users)  # 예금
-    target_budgets = np.random.randint(2000000, 8000000, size=num_users)  # 목표 예산
-
-    df_user_finance = pd.DataFrame({
-        'user_id': user_ids,
-        'uf_capital': capitals,
-        'uf_loan': loans,
-        'uf_installment_saving': installment_savings,
-        'uf_deposit': deposits,
-        'uf_target_budget': target_budgets
-    })
-
-    # tb_received_paid (입출금 내역)
-    details = {
-        'income': ['선물', '임대', '보너스', '입금', '송금', '기타'],
-        'expense': ['마트', '편의점', '식사', '출금', '송금']
-    }
-    fixed_incomes = ['월급', '이자', '배당금']
-    fixed_expenses = ['보험료', '대출 상환', '공과금', '교통', '정기 예금', '적금', '통신비']
-
-    date_a = '2024-01-01'
-    start_date = datetime(int(date_a[:4]), int(date_a[5:7]), int(date_a[8:]))
-    end_date = datetime.today()
-
-    records = []
-    
-    # 각 사용자별 고정 수입 및 지출 값을 처음에 생성해 저장해둠
-    fixed_income_values = {user_id: {income: round_to_hundred(random.randint(*fixed_income_range)) for income in fixed_incomes} for user_id in user_ids}
-    fixed_expense_values = {user_id: {expense: round_to_hundred(random.randint(*fixed_expense_range)) for expense in fixed_expenses} for user_id in user_ids}
-
-    for user_id, loan in zip(user_ids, df_user_finance['uf_loan']):
-        current_date = start_date
-        last_fixed_income_month = -1
-        last_fixed_expense_month = -1
-        loan_payment_done = False
-        while current_date <= end_date:
-            if current_date.day in [15, 25]:
-                # 고정 수입 내역 (매달 같은 값)
-                for detail in fixed_incomes:
-                    if current_date.month != last_fixed_income_month:
-                        amount = fixed_income_values[user_id][detail]
-                        rp_hold = 0
-                        records.append([user_id, current_date, detail, amount, rp_hold, 0])
-                        last_fixed_income_month = current_date.month
-                        
-                # 고정 지출 내역 (매달 같은 값, 대출 상환은 한 달에 한 번만 기록)
-                if current_date.month != last_fixed_expense_month:
-                    for detail in fixed_expenses:
-                        if detail == '대출 상환' and loan > 0 and not loan_payment_done:
-                            amount = min(loan, fixed_expense_values[user_id][detail])
-                            loan -= amount
-                            rp_hold = 0
-                            records.append([user_id, current_date, detail, amount, rp_hold, 1])
-                            loan_payment_done = True
-                        elif detail != '대출 상환':
-                            amount = fixed_expense_values[user_id][detail]
-                            rp_hold = 0
-                            records.append([user_id, current_date, detail, amount, rp_hold, 1])
-                    last_fixed_expense_month = current_date.month
-                    loan_payment_done = False  # 다음 달에 다시 상환 가능
-
-            # 기타 수입 및 지출 내역 (랜덤하게 하루 최대 2개 생성)
-            for detail in details['income']:
-                if random.random() < 0.2:
-                    amount = round_to_hundred(random.randint(*income_range))
-                    rp_hold = 1
-                    records.append([user_id, current_date, detail, amount, rp_hold, 0])
-
-            for detail in details['expense']:
-                if random.random() < 0.2 and detail != '대출 상환':
-                    amount = round_to_hundred(random.randint(*expense_range))
-                    rp_hold = 1
-                    records.append([user_id, current_date, detail, amount, rp_hold, 1])
-
-            current_date += timedelta(days=1)
-
-    df_received_paid = pd.DataFrame(records, columns=['user_id', 'rp_date', 'rp_detail', 'rp_amount', 'rp_hold', 'rp_part'])
-
-    # tb_shares_held (주식 거래 내역)
-    shares_dates = pd.date_range(start=date_a, end=datetime.today(), freq='D').to_list()
-
-    share_records = []
-    for user_id in user_ids:
-        for date in shares_dates:
-            # 주식 매수/매도 내역을 -10에서 10까지 랜덤으로 설정
-            ss_count = np.random.randint(-10, 11)  # 삼성 주식 매수/매도
-            ap_count = np.random.randint(-10, 11)  # 애플 주식 매수/매도
-            bit_count = np.random.randint(-10, 11)  # 비트코인 매수/매도
-
-            share_records.append([user_id, date, ss_count, ap_count, bit_count])
-
-    df_shares_held = pd.DataFrame(share_records, columns=['user_id', 'sh_date', 'sh_ss_count', 'sh_ap_count', 'sh_bit_count'])
-
-    return df_user_key, df_user_information, df_user_finance, df_received_paid, df_shares_held
 
 # per pbr 계산 함수
 def get_per_pbr_df(ticker_symbol, start_date, end_date):
@@ -1136,10 +982,6 @@ sarima_bit_predict_df = sarima_predict_up_to_date('sc_coin', './stock_model/regr
 
 # 최종 데이터프레임 생성
 df_stock_predict = create_final_dataframe(xgb_predict_df, sarima_ap_predict_df, sarima_bit_predict_df)
-print(df_stock_predict)
-
-
-
 
 # ************************************** tb_main_economic_index **************************************
 # NASDAQ
@@ -1284,10 +1126,6 @@ korea_economic_indicator_df = korea_economic_indicator_df.reset_index().rename(c
 korea_economic_indicator_df.fillna(method='ffill', inplace=True)
 korea_economic_indicator_df['fd_date'] = korea_economic_indicator_df['fd_date'].astype(str).map(lambda x : x[:10])
 
-
-df_user_key, df_user_information, df_user_finance, df_received_paid, df_shares_held = create_user_data()
-df_user_key, df_user_information, df_user_finance, df_received_paid, df_shares_held = create_user_data()
-
 # ************************************** tb_us_economic_indicator **************************************
 fred = Fred(api_key=fred_api_key)
 
@@ -1377,28 +1215,16 @@ def insert_data(df, table_name, columns, values):
 
 # 테이블별 데이터 삽입
 table_names = {
-    0: 'tb_user_key',
-    1: 'tb_user_information',
-    2: 'tb_user_finance',
-    3: 'tb_received_paid',
-    4: 'tb_shares_held',
-    5: 'tb_finance_date',
-    6: 'tb_stock',
-    7: 'tb_korea_economic_indicator',
-    8: 'tb_us_economic_indicator',
-    9: 'tb_main_economic_index',
-    10: 'tb_news',
-    11: 'tb_stock_predict',
+    0: 'tb_received_paid',
+    1: 'tb_shares_held',
+    2: 'tb_finance_date',
+    3: 'tb_stock',
+    4: 'tb_korea_economic_indicator',
+    5: 'tb_us_economic_indicator',
+    6: 'tb_main_economic_index',
+    7: 'tb_news',
+    8: 'tb_stock_predict',
 }
-
-columns_user_key = ['uk_email', 'uk_password', 'uk_permission']
-values_user_key = ['uk_email', 'uk_password', 'uk_permission']
-
-columns_user_information = ['user_id', 'ui_name', 'ui_birth_date', 'ui_sex', 'ui_bank_num', 'ui_caution', 'ui_phone_number']
-values_user_information = ['user_id', 'ui_name', 'ui_birth_date', 'ui_sex', 'ui_bank_num', 'ui_caution', 'ui_phone_number']
-
-columns_user_finance = ['user_id', 'uf_capital', 'uf_loan', 'uf_installment_saving', 'uf_deposit', 'uf_target_budget']
-values_user_finance = ['user_id', 'uf_capital', 'uf_loan', 'uf_installment_saving', 'uf_deposit', 'uf_target_budget']
 
 columns_received_paid = ['user_id', 'rp_date', 'rp_detail', 'rp_amount', 'rp_hold', 'rp_part']
 values_received_paid = ['user_id', 'rp_date', 'rp_detail', 'rp_amount', 'rp_hold', 'rp_part']
@@ -1428,18 +1254,15 @@ columns_stock_predict = ['sp_date', 'sp_ss_predict', 'sp_ap_predict', 'sp_bit_pr
 values_stock_predict = ['sp_date', 'sp_ss_predict', 'sp_ap_predict', 'sp_bit_predict']
 
 # 데이터 삽입
-insert_data(df_user_key, table_names[0], columns_user_key, values_user_key)
-insert_data(df_user_information, table_names[1], columns_user_information, values_user_information)
-insert_data(df_user_finance, table_names[2], columns_user_finance, values_user_finance)
-insert_data(df_received_paid, table_names[3], columns_received_paid, values_received_paid)
-insert_data(df_shares_held, table_names[4], columns_shares_held, values_shares_held)
-insert_data(df_finance_date, table_names[5], columns_finance_date, values_finance_date)
-insert_data(df_stock, table_names[6], columns_stock, values_stock)
-insert_data(df_korea_economic_indicator, table_names[7], columns_korea_economic_indicator, values_korea_economic_indicator)
-insert_data(df_us_economic_indicator, table_names[8], columns_us_economic_indicator, values_us_economic_indicator)
-insert_data(df_main_economic_index, table_names[9], columns_main_economic_index, values_main_economic_index)
-insert_data(df_news, table_names[10], columns_news, values_news)
-insert_data(df_stock_predict, table_names[11], columns_stock_predict, values_stock_predict)
+insert_data(df_received_paid, table_names[0], columns_received_paid, values_received_paid)
+insert_data(df_shares_held, table_names[1], columns_shares_held, values_shares_held)
+insert_data(df_finance_date, table_names[2], columns_finance_date, values_finance_date)
+insert_data(df_stock, table_names[3], columns_stock, values_stock)
+insert_data(df_korea_economic_indicator, table_names[4], columns_korea_economic_indicator, values_korea_economic_indicator)
+insert_data(df_us_economic_indicator, table_names[5], columns_us_economic_indicator, values_us_economic_indicator)
+insert_data(df_main_economic_index, table_names[6], columns_main_economic_index, values_main_economic_index)
+insert_data(df_news, table_names[7], columns_news, values_news)
+insert_data(df_stock_predict, table_names[8], columns_stock_predict, values_stock_predict)
 
 
 # 추가적인 테이블 삽입 예시 (나머지 테이블도 동일한 형식으로 추가)
