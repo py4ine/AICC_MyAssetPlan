@@ -5,7 +5,9 @@
 
 ## 1.2 프로젝트 로고
 <div align="center">![Logo](/readme_image/Logo.png)</div>
-
+<div align="center">
+    <img src="/readme_image/Logo.png" alt="Logo">
+</div>
 
 ## 1.3 프로젝트 정보
 ### 1.3.1 소개
