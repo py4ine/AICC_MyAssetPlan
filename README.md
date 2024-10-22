@@ -375,7 +375,7 @@
 
 👩‍💻 [송민영](https://star-myrtle-f04.notion.site/_-12707c83d7b1805b8238dc266b4a145a?pvs=4)
 
-👩‍💻 [신재준]()
+👩‍💻 [신재준](https://boiling-wineberry-692.notion.site/127d1b228d9c8074b8bec3562ce8d487?pvs=4)
 
 👩‍💻 [심유경](https://hammerhead-surf-fe5.notion.site/MAP-1d392cf15d0247869e04343ccdfed44b?pvs=4)
 
