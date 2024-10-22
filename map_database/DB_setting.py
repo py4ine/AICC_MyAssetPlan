@@ -59,9 +59,6 @@ import pytz
 
 kst = pytz.timezone('Asia/Seoul')
 
-# Faker 라이브러리 사용
-fake = faker.Faker('ko_KR')  # 한국어 로케일 설정
-
 # 데이터베이스 연결 정보
 database_info = open('./database_info/database_id.txt', 'r').readlines()
 
