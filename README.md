@@ -167,7 +167,7 @@
 ## 6.2 데이터베이스
 - `DB_setting.py`를 통해 DB를 세팅하고, `DB_update.py`를 통해 DB를 업데이트 할 수 있습니다.
 
-📌 [상세 설명]()
+📌 [상세 설명](https://github.com/LittlePrince327/AICC_MyAssetPlan/wiki/Database)
 
 
 
