@@ -128,7 +128,7 @@ FLUSHALL // 활성 세션 전체 강제 삭제
 <div style="display:flex; flex-direction:column; align-items:flex-start;">
 
     
-## <div align="center"> Package Manager </div>
+### <div align="center"> Package Manager </div>
 <div align="center" >
 <img src="https://img.shields.io/badge/Node.js-5FA04E?style=for-the-badge&logo=node.js&logoColor=white">
 <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">
@@ -138,7 +138,7 @@ FLUSHALL // 활성 세션 전체 강제 삭제
 </div>
 
 
-## <div align="center"> Cooperation Tools </div>
+### <div align="center"> Cooperation Tools </div>
 <div align="center">
 <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white">
 <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white">
@@ -148,7 +148,7 @@ FLUSHALL // 활성 세션 전체 강제 삭제
 </div>
 
 
-## <div align="center"> IDE </div>
+### <div align="center"> IDE </div>
 <div align="center">
 <img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white">
 <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white">
@@ -157,14 +157,14 @@ FLUSHALL // 활성 세션 전체 강제 삭제
 </div>
 
 
-## <div align="center"> Database </div>
+### <div align="center"> Database </div>
 <div align="center"> 
 <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"> 
 <img src="https://img.shields.io/badge/MariaDB-F80000?style=for-the-badge&logo=mariadb&logoColor=white">
 <img src="https://img.shields.io/badge/Redis-FF4438?style=for-the-badge&logo=redis&logoColor=white">
 </div>
 
-## <div align="center"> Deployment </div>
+### <div align="center"> Deployment </div>
 <div align="center">
 <img src="https://img.shields.io/badge/AWS EC2-FF9900?style=for-the-badge&logo=amazon ec2&logoColor=white">
 <img src="https://img.shields.io/badge/AWS VPC-232F3E?style=for-the-badge&logo=amazon&logoColor=white">
