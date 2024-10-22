@@ -1,1 +1,0 @@
-client readme 사진 폴더입니다 .
