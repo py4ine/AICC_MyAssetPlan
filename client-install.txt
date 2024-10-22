@@ -1,0 +1,6 @@
+# Client 관련 설치
+npm install
+npm install fullcalendar
+npm install @fullcalendar/react
+npm install framer-motion
+npm install react-paginate

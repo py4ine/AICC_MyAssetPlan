@@ -1,0 +1,13 @@
+# Server 관련 설치
+npm install
+npm install express-rate-limit  # API 호출 제한을 위해 설치
+npm install nodemailer
+python -m spacy download ko_core_news_sm  # 챗봇 이용을 위한 한국어 모델 설치
+npm install ioredis
+npm install socket.io
+npm install express-socket.io-session
+npm install bcryptjs
+
+
+# 비밀번호 해싱 ( 해싱이 안되어있는 사용자 비밀번호 전체 해싱 )
+node join_security/hashExistingPasswords.js

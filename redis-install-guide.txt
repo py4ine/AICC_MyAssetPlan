@@ -1,0 +1,11 @@
+# Redis 관련 설치
+wsl --install
+sudo apt install redis-server
+sudo service redis-server start
+
+# Redis 세션 확인 및 삭제
+# 터미널 열기 후 다음 명령어 실행
+redis-cli
+KEYS sess:*  # 전체 세션 확인
+FLUSHALL  # 활성 세션 전체 강제 삭제
+
