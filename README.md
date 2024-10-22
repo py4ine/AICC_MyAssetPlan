@@ -245,6 +245,8 @@
 
 
 📌 [웹 상세 설명](https://github.com/LittlePrince327/AICC_MyAssetPlan/wiki/News-page)
+
+
 📌 [모델링 상세 설명](https://github.com/LittlePrince327/AICC_MyAssetPlan/wiki/News-Classification--Modeling-and-Algorhythm)
 
 ## 7.10 통합 채팅방
@@ -282,7 +284,11 @@
 ![Algorithm Chatbot](/readme_image/AlgorithmChatbot.png)
 
 📌 [웹 상세 설명]()
+
+
 📌 [의도인식 모델링 상세 설명](https://github.com/LittlePrince327/AICC_MyAssetPlan/wiki/Chatbot-Intent-Recognition-Modeling)
+
+
 📌 [답변 생성 모델 알고리즘 상세 설명](https://github.com/LittlePrince327/AICC_MyAssetPlan/wiki/Chatbot-Stock-Market-Response-Generation-Algorithm)
 
 
