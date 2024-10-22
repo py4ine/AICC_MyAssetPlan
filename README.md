@@ -159,7 +159,6 @@ FLUSHALL // 활성 세션 전체 강제 삭제
 
 ### <div align="center"> Database </div>
 <div align="center"> 
-<img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"> 
 <img src="https://img.shields.io/badge/MariaDB-F80000?style=for-the-badge&logo=mariadb&logoColor=white">
 <img src="https://img.shields.io/badge/Redis-FF4438?style=for-the-badge&logo=redis&logoColor=white">
 </div>
