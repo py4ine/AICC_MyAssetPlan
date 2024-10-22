@@ -283,7 +283,7 @@
 - 알고리즘 순서도
 ![Algorithm Chatbot](/readme_image/AlgorithmChatbot.png)
 
-📌 [웹 상세 설명]()
+📌 [웹 상세 설명](https://github.com/LittlePrince327/AICC_MyAssetPlan/wiki/Chatbot)
 
 
 📌 [의도인식 모델링 상세 설명](https://github.com/LittlePrince327/AICC_MyAssetPlan/wiki/Chatbot-Intent-Recognition-Modeling)
@@ -343,7 +343,7 @@
 
 👩‍💻 [심유경](https://hammerhead-surf-fe5.notion.site/MAP-1d392cf15d0247869e04343ccdfed44b?pvs=4)
 
-👩‍💻 [인진석]()
+👩‍💻 [인진석](https://www.notion.so/MAP-3ebbe83c69264a5981eb8f305090eea3?pvs=4)
 
 👩‍💻 [임세빈](https://creative-fox-a1a.notion.site/12728e6ef1ff80638819cacfa42db1e3?pvs=4)
 
