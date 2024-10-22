@@ -66,7 +66,7 @@ function NewsTalk() {
     const delay = clearTime - currentTime;
     if (delay > 0) {
       clearTimerRef.current = setTimeout(() => {
-        clearAllMessages(); // 1분 후 모든 메시지 삭제
+        clearAllMessages(); // 24시간 후 모든 메시지 삭제
       }, delay);
       console.log(`Timer set: will clear messages in ${delay} ms`);
     } else {
@@ -109,7 +109,7 @@ function NewsTalk() {
       // 메세지 삭제 타이머 
       const existingClearTime = localStorage.getItem('clearTime');
       if (!existingClearTime) {
-        const newClearTime = Date.now() + 120 * 1000; // 1분 후 타이머 설정
+        const newClearTime = Date.now() + 24 * 60 * 60 * 1000; // 24시간 후 타이머 설정
         localStorage.setItem('clearTime', newClearTime);
         setClearTimer(newClearTime);
       }
