@@ -83,44 +83,11 @@
 ### 3.1.2 학습환경 ◻[Link]()
 
 ## 3.2 설치 및 실행
-### 3.2.1 client 관련 설치
-```
-npm install
-npm install fullcalendar 
-npm install @fullcalendar/react
-npm install framer-motion
-npm install react-paginate
-```
+📌 [client 관련 설치 안내](./client-install.txt)
 
-### 3.2.2 server 관련 설치
-```
-npm install
-npm install express-rate-limit // api 호출 제한을 위해 설치
-npm install nodemailer
-python -m spacy download ko_core_news_sm //chatbot 이용을 위한 한국어 모델 설치
-npm install ioredis
-npm install socket.io
-npm install express-socket.io-session
-npm install bcryptjs
-```
+📌 [server 관련 설치 안내](./server-install.txt)
 
-#### 3.2.2.1 redis 관련 설치
-```
-wsl --install 
-sudo apt install redis-server
-sudo service redis-server start
-```
-
-#### 3.2.2.2 redis session check
-```
-open wsl terminal
-redis-cli
-KEYS sess:* // 전체 세션 확인
-FLUSHALL // 활성 세션 전체 강제 삭제
-```
-
-`node join_security/hashExistingPasswords.js` // 해싱이 안 되어있는 사용자 비밀번호 전체 해싱
-
+📌 [redis 관련 설치 및 확인 안내](./redis-install-guide.txt)
 
 # 4. 기술 스택
 
