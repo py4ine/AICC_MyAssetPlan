@@ -232,19 +232,20 @@
 ![Algorithm Stock](/readme_image/AlgorithmStock.png)
 
 
-📌 [상세 설명](https://github.com/LittlePrince327/AICC_MyAssetPlan/wiki/Stock-Predict)
+📌 [웹 상세 설명](https://github.com/LittlePrince327/AICC_MyAssetPlan/wiki/Stock-Predict)
 
 
 ## 7.9 뉴스
 - 오늘의 뉴스를 확인할 수 있는 페이지로 뉴스의 제목, 본문 요약, 원문 링크를 확인할 수 있습니다.
 - KcBERT, KF-DeBERTa 모델과 키워드를 통한 분류를 통해 호재와 악재를 분류하여 화면에서 확인할 수 있습니다.
+- 모델/모델설명/평가지표 등 추가
 - 알고리즘 순서도
   
 ![Algorithm Chatbot](/readme_image/AlgorithmNews.png)
 
 
-📌 [상세 설명](https://github.com/LittlePrince327/AICC_MyAssetPlan/wiki/News-page)
-
+📌 [웹 상세 설명](https://github.com/LittlePrince327/AICC_MyAssetPlan/wiki/News-page)
+📌 [모델링 상세 설명](https://github.com/LittlePrince327/AICC_MyAssetPlan/wiki/News-Classification--Modeling-and-Algorhythm)
 
 ## 7.10 통합 채팅방
 - 사용자 간 익명으로 소통할 수 있는 커뮤니티 기능을 제공합니다. 
@@ -274,11 +275,15 @@
 - 그 외에 의도인식 분류가 "주식" 혹은 "재무"인 경우 DB에 관련 데이터가 있을 경우 엔터티에 따라 답변합니다.
 - 10줄 내 답변은 챗봇 대화창에서 답변이 사용자에게 제공됩니다.
 - 10줄 이상일 경우 "상세 내역"을 클릭하여 모달창에서 전체 내역을 답변합니다.
+- 모델/모델설명/평가지표 등 추가
+
+
 - 알고리즘 순서도
 ![Algorithm Chatbot](/readme_image/AlgorithmChatbot.png)
 
-📌 [상세 설명]()
-
+📌 [웹 상세 설명]()
+📌 [의도인식 모델링 상세 설명](https://github.com/LittlePrince327/AICC_MyAssetPlan/wiki/Chatbot-Intent-Recognition-Modeling)
+📌 [답변 생성 모델 알고리즘 상세 설명](https://github.com/LittlePrince327/AICC_MyAssetPlan/wiki/Chatbot-Stock-Market-Response-Generation-Algorithm)
 
 
 # 8. 총평
@@ -322,7 +327,7 @@
 📤 [***AWS VPC 데이터베이스***](https://github.com/sebin0918/aiccmap_database)
 
 ## 8.2 개인 회고
-👩‍💻 [김준우]()
+👩‍💻 [김준우](https://shrouded-humerus-d68.notion.site/127400edb9e480048911f6208b1234c8?pvs=4)
 
 👩‍💻 [박상희]()
 
