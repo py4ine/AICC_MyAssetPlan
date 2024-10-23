@@ -384,7 +384,7 @@
 ## 8.2 개인 회고
 👩‍💻 [김준우](https://shrouded-humerus-d68.notion.site/127400edb9e480048911f6208b1234c8?pvs=4)
 
-👩‍💻 [박상희]()
+👩‍💻 [박상희](https://plausible-sedum-d7d.notion.site/1285d20907218032a79de0cbc939fe99?pvs=4)
 
 👩‍💻 [송민영](https://star-myrtle-f04.notion.site/_-12707c83d7b1805b8238dc266b4a145a?pvs=4)
 
