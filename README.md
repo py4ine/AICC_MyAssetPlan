@@ -152,8 +152,8 @@
 | ![News Page](./readme_image/news.png)  | ![News Talk](./readme_image/newsTalk.png) |
 | **FAQ**   | **관리자 화면** |
 | ![FAQ](./readme_image/FAQ.png) | ![Adim](./readme_image/admin.png) |
-| **챗봇**    | - |
-| ![Chatbot](./readme_image/chatbot.png) | -|
+| **챗봇**    | **챗봇 모달** |
+| ![Chatbot](./readme_image/chatbot.png) | ![Chatbot modal](./readme_image/Chatbot-modal.png)|
 
 
 
