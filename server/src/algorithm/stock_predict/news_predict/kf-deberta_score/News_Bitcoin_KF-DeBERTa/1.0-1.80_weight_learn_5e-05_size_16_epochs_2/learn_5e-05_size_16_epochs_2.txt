@@ -1,0 +1,16 @@
+# 하이퍼파라미터 그리드 정의
+param_grid = {
+    'learning_rate': [5e-5],
+    'per_device_train_batch_size': [16],
+    'num_train_epochs': [2]
+}
+
+'accuracy': 0.7241379310344828
+'precision': 1.0
+'recall': 0.40130151843817785
+''specificity': 1.0
+'f1_score': 0.5727554179566563
+
+confuse_matrix
+1079 0
+552 370

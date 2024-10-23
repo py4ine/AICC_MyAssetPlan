@@ -1,0 +1,30 @@
+과소적합
+
+# 클래스 가중치 계산
+total_rate = 1
+over_rate = 1.00
+under_rate = 1.00
+
+negative_sample_size: 3824
+positive_sample_size: 4555
+
+# TrainingArguments 설정
+training_args = TrainingArguments(
+    output_dir = './results',  # 학습된 모델과 결과를 저장할 경로 설정
+    learning_rate=5e-05,  # 학습률 설정
+    per_device_train_batch_size = 8,  # 학습 배치 크기 설정
+    per_device_eval_batch_size = 8,  # 평가 배치 크기 설정
+    num_train_epochs = 3,  # 현재 학습 에포크 수 설정 8
+    weight_decay=0.01,  # 가중치 감쇠 설정
+    logging_dir='./logs',  # 로그 저장 경로 설정
+    logging_steps=10,  # 로그를 기록할 단계 수 설정
+)
+
+Accuracy: 0.6420047732696897
+Precision: 1.0
+Recall: 0.329608938547486
+F1 Score: 0.4957983193277311
+Specificity: 1.0
+Confusion Matrix:
+[[781 0]
+ [600  295]]
