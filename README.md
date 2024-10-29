@@ -48,7 +48,7 @@
 #### 👩‍💻 [송민영](https://github.com/mys1110) (팀장)
 #### 👩‍💻 [박상희](https://github.com/LittlePrince327) (AI 파트장)
 #### 👩‍💻 [인진석](https://github.com/jinseok-in) (DB 파트장)
-#### 👩‍💻 [임세빈](https://github.com/sebin0918) (Web 파트장)
+#### 👩‍💻 [임세빈](https://github.com/sebin0918) (WEB 파트장)
 #### 👩‍💻 [김준우](https://github.com/py4ine)
 #### 👩‍💻 [신재준](https://github.com/kimsamak)
 #### 👩‍💻 [심유경](https://github.com/YukyungShim)
