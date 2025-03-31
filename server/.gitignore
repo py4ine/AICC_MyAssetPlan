@@ -1,2 +1,5 @@
 node_modules
+cert
 /src/Algorithm/script/model.safetensors
+
+.DS_Store

@@ -275,7 +275,7 @@ app.use((err, req, res, next) => {
   res.status(500).json({ message: '서버 오류가 발생했습니다.' });
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8000;
 server.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
